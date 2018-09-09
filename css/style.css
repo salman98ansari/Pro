@@ -1,0 +1,44 @@
+/* nav bar style */
+
+body{
+    font-size: 16pt;
+    margin: 0;
+    box-sizing: border-box;
+}
+header nav ul {
+    list-style : none;
+    text-align: right;
+    margin:0;
+    background-color: #0073aa;
+}
+header nav ul li a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 1px;
+    margin-right: 10px;
+}
+
+header nav ul:first-child{
+    
+    padding-left: 100px;
+}
+
+/*search bar style */
+
+
+#search{
+    width: 30%;
+    padding: 3px;
+    border: 1px solid #000000;
+    font-family: Georgia,Georgia, 'Times New Roman', Times, serif;
+    margin: 10px;
+    margin-right: 0;
+
+}
+#submit{
+    
+}
