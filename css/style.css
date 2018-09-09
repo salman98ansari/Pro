@@ -1,5 +1,4 @@
 /* nav bar style */
-
 body{
     font-size: 16pt;
     margin: 0;    
@@ -9,15 +8,7 @@ body html{
     margin: 0;
     padding: 0;
 }
-/*  back ground image*/
-body{
-    background-image: url("../img/back.jpg");
-	background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    width: 100%;		
-}
+
 header nav ul {
     list-style : none;
     text-align: right;
@@ -58,11 +49,8 @@ header nav ul li{
 }
 #submit{
     border-radius: 5px 5px 5px 5px;
-    
     border: 1px solid #000000;
-    
     cursor: pointer;
-
     margin-left: -5px;   
 }
 
