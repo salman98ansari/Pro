@@ -22,10 +22,7 @@ header nav ul li{
     margin-right: 10px;
 }
 
-header nav ul:first-child{
-    
-    padding-left: 100px;
-}
+
 
 /*search bar style */
 
@@ -40,5 +37,22 @@ header nav ul:first-child{
 
 }
 #submit{
+    border-radius: 5px 5px 5px 5px;
     
+    border: 1px solid #000000;
+    
+    cursor: pointer;
+
+    margin-left: -5px;   
+}
+
+#submit:hover{
+    background: #0073aa;
+    transition: all 0.30s;
+    color: #ffffff;
+
+}
+
+.search-bar{
+    text-align: center;
 }
