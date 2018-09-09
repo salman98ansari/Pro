@@ -5,6 +5,13 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
+
+/*  back ground image*/
+body{
+    background-image: url("../img/back.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;		
+}
 header nav ul {
     list-style : none;
     text-align: right;
@@ -20,6 +27,12 @@ header nav ul li{
     display: inline-block;
     padding: 1px;
     margin-right: 10px;
+}
+
+.logo{
+    position:absolute;
+    left: 20px;
+    top: 0;
 }
 
 
@@ -65,8 +78,8 @@ header nav ul li{
 }
 */
 .search-bar{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }
 
