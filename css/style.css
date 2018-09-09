@@ -56,3 +56,17 @@ header nav ul li{
 .search-bar{
     text-align: center;
 }
+/*
+.search-bar{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
+.search-bar{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
