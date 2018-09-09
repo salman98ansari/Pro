@@ -53,6 +53,7 @@ header nav ul li{
     font-family: Georgia,Georgia, 'Times New Roman', Times, serif;
     margin: 10px;
     margin-right: 0;
+    border-radius: 5px 5px 5px 5px;
 
 }
 #submit{
