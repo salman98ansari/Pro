@@ -31,10 +31,29 @@
 
  <main>
 
-	 <div class="grid1">
+	<?php
 
-		<div class="grid1-1"></div>
-		<div class="grid1-2">sfej</div>
+    $conn = new mysqli('localhost','root','root','testing');
+
+    if($conn->connect_error)
+    {
+        die($conn->connect_error);
+    }
+
+    $query= "SELECT * FROM flipkartt WHERE srno=150";
+    $result=mysqli_query($conn,$query);
+	mysqli_close($conn);
+	
+
+	if(true)
+	{?>
+	 <div class="grid1">
+		<?php
+		while($s=mysqli_fetch_array($result))
+		{?>
+
+		<div class="grid1-1"><img src="<?php echo $s['link'] ?>" alt=""></div>
+		<div class="grid1-2"> <?php  echo $s['name']?> <br> <?php echo $s['specs'] ?></div>
 		<div class="grid1-3">jfd</div>
 		<div class="grid1-4">gs</div>
 		<div class="grid1-5">sd</div>
@@ -43,10 +62,20 @@
 		<div class="grid1-8">ht</div>
 		<div class="grid1-9">dht</div>
 		<div class="grid1-10">dthf</div>
+	</div>
+	<?php
 
+		}
+	}
 
+	else{
 
-	 </div>	
+		echo "<span> NO Result </span>";
+
+	}
+	?>
+
+	
 	
  </main>
 </body>

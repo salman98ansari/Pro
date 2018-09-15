@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TEST</title>
 </head>
 <body>
 
@@ -17,9 +17,10 @@
         die($conn->connect_error);
     }
 
-    $query= "SELECT * FROM product WHERE product_id=1";
+    $query= "SELECT * FROM flipkartt WHERE srno=150";
     $result=mysqli_query($conn,$query);
     mysqli_close($conn);
+    
 
     if(true)
     {?>
@@ -28,10 +29,10 @@
         while($s=mysqli_fetch_array($result))
         {?>
 
-            <div> <h1><?php echo $s['product_name']?></h1></div>
+            <div> <h1> <?php echo $s['name']?> </h1> </div>
             <div> <h1><?php echo $s['price']?></h1></div>
-            <div> <h1><?php echo $s['size']?></h1></div>
-            <div> <h1><?php echo $s['storage_id']?></h1></div>
+            <div> <h1><?php echo $s['specs']?></h1></div>
+            <div> <h1><?php echo $s['link']?></h1></div>
             
         </li>
         <?php
@@ -48,3 +49,4 @@
    
 </body>
 </html>
+
