@@ -10,22 +10,40 @@ body html{
     padding: 0;
 }
 
+.background-img{
+    background-image: url("../img/backimg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;		
+}
 
-header nav ul {
+nav ul {
     list-style : none;
     text-align: right;
+    font-size: 14pt;
     margin:0;
     background-color: #0073aa;
 }
-header nav ul li a {
+
+nav ul li a {
     text-decoration: none;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-header nav ul li{
+nav ul li{
     display: inline-block;
-    padding: 1px;
+    padding: 7px;
     margin-right: 10px;
+    border-bottom: 1px solid #0073aa;
+}
+nav ul li:hover{
+    border-bottom: 1px solid white;
+}
+nav ul li:hover a{
+    color: white;
+    text-decoration: none;
 }
 
 .logo{
@@ -36,47 +54,114 @@ header nav ul li{
 
 
 
+
+
 /*search bar style */
 
 
-#search{
-    width: 30%;
+.search{
+    width: 35%;
+    height: 40px;
     padding: 3px;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     font-family: Georgia,Georgia, 'Times New Roman', Times, serif;
     margin: 10px;
     margin-right: 0;
-    border-radius: 5px 5px 5px 5px;
-
+    /* border-radius: 5px 5px 5px 5px; */
+    padding-left: 15px;
+    box-shadow: 1px 1px 5px grey;
 }
-#submit{
-    border-radius: 5px 5px 5px 5px;
+.submit{
+    /* border-radius: 5px 5px 5px 5px; */
     border: 1px solid #000000;
     cursor: pointer;
     margin-left: -5px;   
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    color: #757575;
 }
 
-#submit:hover{
+.submit:hover{
     background: #0073aa;
     transition: all 0.30s;
     color: #ffffff;
 
 }
 
-.search-bar{
-    text-align: center;
-}
-/*
-.search-bar{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-*/
-.search-bar{
+
+.search-ba{
     position: absolute;
     top: 50%;
     width: 100%;
+    text-align: center;
+    
 }
 
+
+/*about and feedback */
+/*
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+    width: 99vw;
+    grid-gap: 3px;
+    padding: 5px;        
+}
+
+.grid1 .grid1-1 .grid1-2{
+    border: 1px solid black;
+}
+*/
+
+.jumbotron{
+    background-color: grey;
+}
+
+
+.feedback{
+    border: 1px solid black;
+}
+
+
+.input{
+    width: 50%;
+    margin: 20px 0;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px solid blue;
+    margin-top: 0px;
+    padding: 0px;
+
+
+}
+.feedback-message{
+    width: 50%;
+    margin: 20px 0;
+    background: rgba(0,0,0,0);
+    border: 1px solid blue;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+
+}
+
+.submit-but{
+    margin-bottom: 5px;
+}
+
+form div label{
+    /* position: relative; */
+    margin-bottom: 20px;
+}
+
+.my-btn{
+    width: 150px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}

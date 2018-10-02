@@ -10,14 +10,15 @@
 
     <?php
 
-    $conn = new mysqli('localhost','root','root','testing');
+    $conn = new mysqli('localhost','root','root','test');
 
     if($conn->connect_error)
     {
         die($conn->connect_error);
     }
 
-    $query= "SELECT * FROM flipkartt WHERE srno=150";
+    //$query= "SELECT * FROM flipkartt WHERE srno=150";
+    $query='SELECT * FROM amazon WHERE name LIKE "%Redmi%"';
     $result=mysqli_query($conn,$query);
     mysqli_close($conn);
     
@@ -29,10 +30,11 @@
         while($s=mysqli_fetch_array($result))
         {?>
 
-            <div> <h1> <?php echo $s['name']?> </h1> </div>
-            <div> <h1><?php echo $s['price']?></h1></div>
-            <div> <h1><?php echo $s['specs']?></h1></div>
-            <div> <h1><?php echo $s['link']?></h1></div>
+            <div>  <?php echo $s['name']?> </div>
+            <div> <?php echo $s['price']?></div>
+            
+            <div> <?php echo $s['linktopage']?></div>
+            <br>
             
         </li>
         <?php

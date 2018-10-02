@@ -12,42 +12,71 @@
 	integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
 	 crossorigin="anonymous">
 	 <link rel="stylesheet" type="text/css" href="css/style.css" />
-	 <style>
-		 /*  back ground image*/
-		body{
-			background-image: url("img/backimg.jpg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center center;
-			height: 100vh;
-			width: 100%;		
-		}
-	 </style>
-
 </head>
-<body>	
- <header>
-	 <nav>
+<body>
+<div class="background-img">
+
+	 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<ul>
 			<li><a class ="logo" href="#"><img src="..." alt="Brand"></a></li>
 			<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-			<li><a href="product.html"><i class="fas fa-mobile-alt"></i> Mobile</a></li>
-			<li><a href="#"><i class="fas fa-laptop"></i> Laptop</a></li>
-			<li><a href="#"><i class="fas fa-desktop"></i> Desktop</a></li>
-			<li><a href="test.php">Etc</a></li>
+			<li><a href="product.php"> Mobile</a></li>
+			<li><a href="https://www.flipkart.com/" target="blanck"> Flipkart</a></li>
+			<li><a href="https://www.amazon.in/" target="blanck"> Amazon</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#feedback">Feedback</a></li>
 		</ul>
 	</nav>
- </header>
-
- <main>
-	 <div class="search-bar">
-		 <form action="post" action="#">
-				<input type="search" name="search" id="search" class="search" placeholder="Search">
-				<input type="Submit" name="Submit" value="Search" id="submit" class="submit">
-				
+ 
+	 <div class="search-ba">
+		 <form method="post" action="php/searched.php">
+				<input type="search" name="search" id="search" class="search" placeholder="Search" required="required">
+				<input type="submit" name="Submit" value="Search" id="submit" class="submit">		
 		 </form>
 	 </div>
- </main>
+
+
+</div>
+
+<div>
+
+	
+	<div id="about" class="container jumbotron">
+		<h1>About</h1>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ea 
+		odit reiciendis voluptas perferendis delectus beatae? Dolorum deleniti nostrum
+		 magnam. Qui vel soluta facilis harum maiores. Tempora, quos autem.</p>
+		 
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ea 
+		odit reiciendis voluptas perferendis delectus beatae? Dolorum deleniti nostrum
+		magnam. Qui vel soluta facilis harum maiores. Tempora, quos autem.</p>
+	</div>
+
+
+		<div  id="feedback" class="container">
+			<h1>Feedback</h1>
+			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ea 
+			odit reiciendis voluptas perferendis delectus beatae? Dolorum deleniti nostrum
+			magnam. Qui vel soluta facilis harum maiores. Tempora, quos autem.</p>
+
+		</div>
+		<div class="text-center">
+			<form action="php/feedback.php" method="post">
+				<div class="label-name"><label for="name">Name:</label></div>
+				<input class="input" type="text"  name="name" placeholder="Name">
+				<div class="label-name"><label for="email">E-mail:</label></div>
+				<input class="input" id ="user-email" type="email" name="semail" value="" placeholder="username@example.com">
+				<div class="label-name"><label for="feedback">Feedback:</label></div>
+				<textarea class="feedback-message" name="message" placeholder="Feedback Message"></textarea>
+				<div class="submit-but"><input class="btn btn-primary my-btn" type="submit" name="Submit" value="Submit"></div>
+			</form>
+		</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>	
+<script src="js/app.js"></script>
+
+
 </body>
 </html>
 
