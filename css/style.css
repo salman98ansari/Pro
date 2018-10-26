@@ -120,9 +120,11 @@ nav ul li:hover a{
 */
 
 .jumbotron{
-    background-color: grey;
+    background-color: #eceff1;
 }
-
+#about{
+    margin-top: 40px;
+}
 
 .feedback{
     border: 1px solid black;
@@ -156,9 +158,11 @@ nav ul li:hover a{
 }
 
 form div label{
-    /* position: relative; */
+    
     margin-bottom: 20px;
 }
+
+
 
 .my-btn{
     width: 150px;

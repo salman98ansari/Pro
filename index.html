@@ -18,9 +18,8 @@
 
 	 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<ul>
-			<li><a class ="logo" href="#"><img src="..." alt="Brand"></a></li>
+			<li><a class ="logo" href="#"><img src="..." alt="Mobile Comparison"></a></li>
 			<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-			<li><a href="product.php"> Mobile</a></li>
 			<li><a href="https://www.flipkart.com/" target="blanck"> Flipkart</a></li>
 			<li><a href="https://www.amazon.in/" target="blanck"> Amazon</a></li>
 			<li><a href="#about">About</a></li>
@@ -29,8 +28,8 @@
 	</nav>
  
 	 <div class="search-ba">
-		 <form method="post" action="php/searched.php">
-				<input type="search" name="search" id="search" class="search" placeholder="Search" required="required">
+		 <form method="get" action="php/price.php">
+				<input type="search" name="searchdata" id="search" class="search" placeholder="Search" required="required">
 				<input type="submit" name="Submit" value="Search" id="submit" class="submit">		
 		 </form>
 	 </div>
@@ -41,29 +40,28 @@
 <div>
 
 	
-	<div id="about" class="container jumbotron">
+	<div id="about"  class= " container container fluid jumbotron"  class="aboutt">
 		<h1>About</h1>
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ea 
-		odit reiciendis voluptas perferendis delectus beatae? Dolorum deleniti nostrum
-		 magnam. Qui vel soluta facilis harum maiores. Tempora, quos autem.</p>
+		<p>Comparison shopping sites make shopping very convenient by helping you to find the desired product
+		at the most competitive rate.</p>
 		 
-		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ea 
-		odit reiciendis voluptas perferendis delectus beatae? Dolorum deleniti nostrum
-		magnam. Qui vel soluta facilis harum maiores. Tempora, quos autem.</p>
+		<p>When it comes to selecting the best Smartphone, it becomes quite challenging and confusing to select the best one out of a pool of million devices. You have to individually
+			visit different sites to get the best price or top deals and offer.</p>
+		<p>Don’t you agree that one can save a big amount of money & Time
+			online when you know where to look for the information with helps you take
+			better decisions? Yes! With Price Comparison Website</p>	
 	</div>
 
 
 		<div  id="feedback" class="container">
 			<h1>Feedback</h1>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ea 
-			odit reiciendis voluptas perferendis delectus beatae? Dolorum deleniti nostrum
-			magnam. Qui vel soluta facilis harum maiores. Tempora, quos autem.</p>
+			<p>Gives Us Your Valuable Feedback or Suggestion To Improve Working Of Our Website.</p>
 
 		</div>
 		<div class="text-center">
 			<form action="php/feedback.php" method="post">
 				<div class="label-name"><label for="name">Name:</label></div>
-				<input class="input" type="text"  name="name" placeholder="Name">
+				<input class="input" id="sname" type="text"  name="name" placeholder="Name">
 				<div class="label-name"><label for="email">E-mail:</label></div>
 				<input class="input" id ="user-email" type="email" name="semail" value="" placeholder="username@example.com">
 				<div class="label-name"><label for="feedback">Feedback:</label></div>
@@ -75,6 +73,7 @@
 
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>	
 <script src="js/app.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
 
 
 </body>
