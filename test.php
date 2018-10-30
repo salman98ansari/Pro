@@ -17,11 +17,12 @@
         die($conn->connect_error);
     }
 
-    //$query= "SELECT * FROM flipkartt WHERE srno=150";
-    $query='SELECT * FROM amazon WHERE name LIKE "%Redmi%"';
+    $query= "SELECT * FROM flipkartt WHERE srno=150";
+    
     $result=mysqli_query($conn,$query);
     mysqli_close($conn);
-    
+   
+   
 
     if(true)
     {?>
@@ -46,7 +47,7 @@
         echo "<span> No Result </span>";
 
     }
-
+}
     ?>
    
 </body>

@@ -1,3 +1,14 @@
+<?php 
+  session_start(); 
+
+
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: index.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +23,31 @@
 	integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
 	 crossorigin="anonymous">
 	 <link rel="stylesheet" type="text/css" href="css/style.css" />
+
 </head>
 <body>
 <div class="background-img">
 
 	 <nav class="navbar navbar-inverse navbar-fixed-top">
 		<ul>
-			<li><a class ="logo" href="#"><img src="..." alt="Mobile Comparison"></a></li>
-			<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+			<li><a class ="logo" href="index.php">Mobile Comparison</a></li>
+			<li><a href="index.php"><i class="fas fa-home"></i> Home</a></li>
+			<!--
 			<li><a href="https://www.flipkart.com/" target="blanck"> Flipkart</a></li>
 			<li><a href="https://www.amazon.in/" target="blanck"> Amazon</a></li>
+	-->
 			<li><a href="#about">About</a></li>
 			<li><a href="#feedback">Feedback</a></li>
+			<li><a href="log/register.php">Register</a></li>
+			<li><a href="log/login.php">Login</a></li>
+			<?php  if (isset($_SESSION['username'])) : ?>
+			<li> Welcome <strong><?php echo $_SESSION['username']; ?></strong>  </li>
+			<li><a href="index.php?logout='1'" style="color: red;">logout</a></li>
+			<?php endif ?>
 		</ul>
 	</nav>
+
+
  
 	 <div class="search-ba">
 		 <form method="get" action="php/price.php">

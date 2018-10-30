@@ -10,13 +10,11 @@
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <ul>
-    <li><a class ="logo" href="#"><img src="..." alt="Brand"></a></li>
-    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="product.php"> Mobile</a></li>
+    <li><a class ="logo" href="#"><img src="..." alt="Mobile Price Coparison"></a></li>
+    <li><a href="../index.php"><i class="fas fa-home"></i> Home</a></li>
     <li><a href="https://www.flipkart.com/" target="blanck"> Flipkart</a></li>
     <li><a href="https://www.amazon.in/" target="blanck"> Amazon</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#feedback">Feedback</a></li>
+
   </ul>
 </nav>
 <div class="w3-row-padding w3-margin-top"> 
@@ -76,6 +74,7 @@ $count = 4;
     </div>
     </div>
   ';
+  
     $request = "http://www.pricetree.com/dev/api.ashx?pricetreeId=".$item_id."&apikey=7770AD31-382F-4D32-8C36-3743C0271699";
     $response = file_get_contents($request);
     $results = json_decode($response, TRUE);
